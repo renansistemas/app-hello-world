@@ -1,70 +1,36 @@
 # Getting Started with Create React App
+App criado utilizando React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# O que é o Create React App (CRA)?
+O CRA é uma ferramenta que ajuda a configurar rapidamente um projeto React com boas práticas, sem exigir que o desenvolvedor lide diretamente com configurações complexas como:
 
-## Available Scripts
-
-In the project directory, you can run:
+Webpack (para empacotamento de módulos)
+Babel (para transpilar código JavaScript moderno)
+ESLint (para análise de código)
+Outros arquivos de configuração necessários.
+Por padrão, essas configurações ficam escondidas, permitindo ao desenvolvedor focar apenas no desenvolvimento da aplicação.
 
 ### `npm start`
-
-Runs the app in the development mode.\
+Para rodar o app no modo de desenvolvimento.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
+Para rodar os testes unitários.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
+Compila o App para produção da pasta build.
 Your app is ready to be deployed!
-
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+O comando npm run eject remove essa abstração e expõe todas as configurações que estavam ocultas no projeto. Ele faz isso copiando os arquivos de configuração (como Webpack, Babel, ESLint) para o diretório do seu projeto, deixando-os disponíveis para edição.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Após rodar o comando:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O arquivo package.json é modificado para incluir as dependências específicas do Webpack, Babel, etc., que antes estavam gerenciadas internamente pelo CRA.
+Os arquivos de configuração são criados ou expostos, como:
+config/webpack.config.js
+.babelrc ou equivalente
+Configurações de ESLint, Jest (testes), e outros.
+O controle total da configuração do projeto passa a ser do desenvolvedor.
